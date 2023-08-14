@@ -4,6 +4,10 @@
 * Trunk version 2.0.0
 *
 */
+html {
+	scroll-behavior: smooth !important;
+}
+
 a:focus,
 button:focus {
 	outline: none !important;
@@ -17055,9 +17059,14 @@ html.rd-navbar-fixed-linked .page {
 	align-items: center;
 }
 
+.gallery {
+	width: 372px;
+	height: 112px;
+}
+
 .rd-navbar-classic .rd-navbar-list-link {
 	display: block;
-	max-width: 80px;
+	/* max-width: 80px; */
 }
 
 .rd-navbar-classic .rd-navbar-list-link:hover {
