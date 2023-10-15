@@ -112,7 +112,7 @@
                             <p class="cart-inline-subtitle mt-0" style="font-size: 12px;">Introduce las credenciales</p>
                           </div>
                           <div class="cart-inline-main">
-                            <form action="process-login.php" method="post">
+                            <form>
                               <label class="mt-3" for="password">Contraseña:</label>
                               <input type="password" id="password" name="password" class="input-field form-control" required>
                             </form>
@@ -137,7 +137,7 @@
                           </div>
                           <div class="cart-inline-footer">
                             <!-- <a class="button button-md button-default-outline" href="#">Iniciar sesión</a> -->
-                            <a class="button button-md button-primary" href="#">Acceder</a>
+                            <button class="button button-md button-primary" onclick="checkPassword()">Acceder</button>
                           </div>
                         </div>
                       </article>
@@ -1564,6 +1564,21 @@
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    function checkPassword() {
+		// Get the password input value
+		var passwordInput = document.getElementById("password").value;
+
+		// Check if the password matches "Hello"
+		if (passwordInput === "Hello") {
+			// Redirect to the "/profile" page
+			window.location.href = "/pages/votacion.html";
+		} else {
+			// Password is incorrect, you can display an error message here
+			alert("Contraseña incorrecta");
+		}
+	}
+  </script>
 </body>
 
 </html>
