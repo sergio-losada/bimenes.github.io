@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/stats.css">
     <style>
         .ie-panel {
             display: none;
@@ -32,246 +32,6 @@
         html.lt-ie-10 .ie-panel {
             display: block;
         }
-
-        /* Styling for the card */
-        .card {
-            width: 300px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .wrapper {
-            position: relative;
-            overflow-x: hidden;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Styling for the player image */
-        .player-image {
-            width: 100%;
-            max-height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        /* Styling for player information */
-        .player-info {
-            margin-top: 10px;
-        }
-
-        /* Styling for player name */
-        .player-name {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        /* Styling for player position */
-        .player-position {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* Styling for player statistics */
-        .player-stats {
-            margin-top: 10px;
-        }
-
-        /* Styling for statistic labels */
-        .stat-label {
-            font-weight: bold;
-        }
-
-        /* Styling for statistic values */
-        .stat-value {
-            color: #555;
-        }
-
-        .card__header {
-            position: relative;
-            height: 170px;
-            padding: 30px 30px 300px;
-            border-top-right-radius: 15px;
-            border-top-left-radius: 15px;
-            color: #fff;
-        }
-
-        .card__header--porteros {
-            background-color: #F72648;
-            background-image: linear-gradient(#F72648, #FCCB3C);
-
-            background: #F72648;
-            background: linear-gradient(#F72648, #FCCB3C);
-        }
-
-        .card__header--defensas {
-            background-color: #26f78b;
-            background-image: linear-gradient(#26f78b, #3c89fc);
-
-            background: #26f78b;
-            background: linear-gradient(#08ec76, #3c89fc);
-        }
-
-        .card__header--centrocampistas {
-            background-color: #26C9F7;
-            background-image: linear-gradient(#fb0383, #393939);
-
-            background: #26C9F7;
-            background: linear-gradient(#fb0383, #03a2fb);
-        }
-
-        .card__header--delanteros {
-            background-color: #3CA3FC;
-            background-image: linear-gradient(#b04afe, #4afed1);
-
-            background: #3CA3FC;
-            background: linear-gradient(#b04afe, #4afed1);
-        }
-
-        .card__watermark {
-            overflow: hidden;
-            position: absolute;
-            bottom: 10px;
-            right: 0;
-            top: 0;
-
-            width: 100%;
-        }
-
-        .card__watermark::after {
-            content: attr(data-watermark);
-            position: relative;
-            /* left: -20px; */
-            color: rgba(0, 0, 0, .3);
-            font-size: 50px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .card__logo {
-            width: 50px;
-            height: auto;
-        }
-
-        .card__price {
-            float: right;
-            font-size: 16px;
-            font-weight: 300;
-        }
-
-        .card__title {
-            margin: 35px 0 20px;
-            font-size: 15px;
-            line-height: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .card__subtitle {
-            display: block;
-            font-size: 13px;
-            font-weight: 300;
-        }
-
-        .card__body {
-            position: relative;
-            padding: 10px 0px 10px 0px;
-        }
-
-        .card__image {
-            z-index: 1;
-            position: absolute;
-            top: -290px;
-            left: -30px;
-            width: 125%;
-
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-drag: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-
-        .card__wish-list {
-            display: block;
-            width: 50%;
-            margin: 0 auto 15px;
-            padding: 15px;
-            border: 2px solid #fff;
-            border-radius: 20px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        .card__wish-list--19 {
-            color: #8850FF;
-            border-color: #8850FF;
-        }
-
-        .card__wish-list--solstice {
-            color: #FFBA00;
-            border-color: #FFBA00;
-        }
-
-        .card__wish-list--huarache {
-            color: #26C9F7;
-            border-color: #26C9F7;
-        }
-
-        .card__category {
-            display: block;
-            font-size: 12px;
-            color: #AEAEAE;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        .card__will-animate {
-            will-change: transform;
-        }
-
-        .cards-placeholder {
-            display: block;
-            position: relative;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .cards-placeholder__item {
-            opacity: 0.3;
-            display: inline-block;
-            margin-right: 10px;
-            background-color: #fff;
-            width: 30px;
-            height: 5px;
-            border-radius: 5px;
-
-            transition: opacity 0.2s;
-            will-change: opacity;
-        }
-
-        .cards-placeholder__item--active {
-            opacity: 1;
-        }
-
-        .card {
-            flex: 0 1 calc(100% - 20px); /* Inicia con 2 tarjetas por fila */
-            margin: 10px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        
-        @media (max-width: 600px) {
-            .card {
-            flex: 0 1 calc(100% - 20px); /* Cambia a 1 tarjeta por fila en pantallas más pequeñas */
-            }
-        }
-
-        /* .game-info-team {
-	        width: 105px;
-        } */
     </style>
 </head>
 
@@ -340,8 +100,8 @@
                         <div class="rd-navbar-main-top">
                             <div class="rd-navbar-main-container container">
                                 <!-- RD Navbar Brand-->
-                                <div class="rd-navbar-brand"><a href="./"><img class="brand-logo "
-                                            src="..\images\Iconos equipos\bimenes-escudo.png" alt="" width="95"
+                                <div class="rd-navbar-brand"><a href="./"><img class="brand-logo"
+                                            src="../images/Iconos equipos/bimenes-escudo.png" alt="" width="95"
                                             height="126" /></a>
                                 </div>
                                 <!-- RD Navbar List-->
@@ -388,7 +148,7 @@
                                 <ul class="rd-navbar-nav">
                                     <li class="rd-nav-item"><a class="rd-nav-link" href="../index.html">Inicio</a>
                                     </li>
-                                    <li class="rd-nav-item active"><a class="rd-nav-link"
+                                    <li class="rd-nav-item"><a class="rd-nav-link"
                                             href="../pages/calendario.html">Calendario</a>
                                     </li>
                                     <li class="rd-nav-item"><a class="rd-nav-link"
@@ -419,128 +179,76 @@
             <div class="container">
                 <div class="row row-50">
                     <div class="col-lg-12">
-                        <h2>Calendario Bimenes FC - Temporada 2023/2024</h2>
+                        <h2>Plantilla Bimenes FC - Jairo Pintado</h2>
                         <div class="main-component">
                             <!-- Heading Component-->
                             <article class="heading-component">
                                 <div class="heading-component-inner">
-                                    <h6 class="heading-component-title">Liga</h6>
+                                    <h6 class="heading-component-title">Portero</h6>
                                 </div>
                             </article>
-                            <main class="main-content">
+                            <main class="main-content"
+                                style="background-color: white; padding: 1rem; border: 1px rgb(226, 226, 226) solid;">
                                 <article class="news-article">
                                     <div class="news-content">
                                         <div class="card">
-                                            <div class="game-info game-info-creative mb-5">
-                                                <p class="game-info-subtitle">La Braña Sur - Llano 2000</p>
-                                                <h3 class="game-info-title">Liga Oro - Jornada 1</h3>
-                                                <div class="game-info-main">
-                                                    <div class="game-info-team game-info-team-first">
-                                                        <figure><img src="../images/Iconos equipos/LuchyBarber.png" alt=""
-                                                            width="61" height="91" />
-                                                        </figure>
-                                                        <div class="game-result-team-name">LuchyBarber</div>
-                                                        <div class="game-result-team-country">Gijón</div>
+                                            <div class="additional">
+                                                <div class="user-card">
+                                                    <div class="level center">
+                                                        Level 13
                                                     </div>
-                                                    <div class="game-info-middle game-info-middle-vertical">
-                                                        <time class="time-big" datetime="2023-08-17"><span
-                                                                class="heading-4">21-10-2023</span><time
-                                                                datetime="18:00"> 18:00 </time>
-                                                        </time>
-                                                        <div class="game-result-divider-wrap"><span
-                                                                class="game-info-team-divider">VS</span></div>
-                                                        <div class="group-sm">
-                                                            <div class="button button-sm button-share-outline">Compartir
-                                                                <ul class="game-info-share">
-                                                                    <li class="game-info-share-item"><a
-                                                                            class="icon fa fa-twitter"
-                                                                            href="https://www.twitter.com/bimenesfc"
-                                                                            target="_blank"></a></li>
-                                                                    <li class="game-info-share-item"><a
-                                                                            class="icon fa fa-instagram"
-                                                                            href="https://www.instagram.com/bimenesfc"
-                                                                            target="_blank"></a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <a class="button button-sm button-primary" href="https://maps.app.goo.gl/LaiW3HFJBeBe7PpF8" target="_blank">Ver en mapa</a>
+                                                    <div class="points center">
+                                                        5,312 Points
+                                                    </div>
+                                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                        class="img-fluid d-block mx-auto rounded-circle img-thumbnail mb-4">
+                                                </div>
+                                                <div class="more-info">
+                                                    <h1>Jane Doe</h1>
+                                                    <div class="coords">
+                                                        <span>Group Name</span>
+                                                        <span>Joined January 2019</span>
+                                                    </div>
+                                                    <div class="coords">
+                                                        <span>Position/Role</span>
+                                                        <span>City, Country</span>
+                                                    </div>
+                                                    <div class="stats">
+                                                        <div>
+                                                            <div class="title">Awards</div>
+                                                            <i class="fa fa-trophy"></i>
+                                                            <div class="value">2</div>
                                                         </div>
-                                                    </div>
-                                                    <div class="game-info-team game-info-team-second">
-                                                        <figure><img src="../images\Iconos equipos\bimenes-escudo.png"
-                                                            alt="" width="75" height="99" />
-                                                        </figure>
-                                                        <div class="game-result-team-name">Bimenes FC</div>
-                                                        <div class="game-result-team-country">Bimenes</div>
+                                                        <div>
+                                                            <div class="title">Matches</div>
+                                                            <i class="fa fa-gamepad"></i>
+                                                            <div class="value">27</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="title">Pals</div>
+                                                            <i class="fa fa-group"></i>
+                                                            <div class="value">123</div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="title">Coffee</div>
+                                                            <i class="fa fa-coffee"></i>
+                                                            <div class="value infinity">∞</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="game-info game-info-creative mb-5">
-                                                <p class="game-info-subtitle">Montevil - Campo 1</p>
-                                                <h3 class="game-info-title">Liga Oro - Jornada 2</h3>
-                                                <div class="game-info-main">
-                                                    <div class="game-info-team game-info-team-first">
-                                                        <figure><img src="../images\Iconos equipos\bimenes-escudo.png"
-                                                                alt="" width="75" height="99" />
-                                                        </figure>
-                                                        <div class="game-result-team-name">Bimenes FC</div>
-                                                        <div class="game-result-team-country">Bimenes</div>
-                                                    </div>
-                                                    <div class="game-info-middle game-info-middle-vertical">
-                                                        <time class="time-big" datetime="2023-08-17"><span
-                                                                class="heading-4">26-10-2023</span><time
-                                                                datetime="18:00"> 20:45 </time>
-                                                        </time>
-                                                        <div class="game-result-divider-wrap"><span
-                                                                class="game-info-team-divider">VS</span></div>
-                                                        <div class="group-sm">
-                                                            <div class="button button-sm button-share-outline">Compartir
-                                                                <ul class="game-info-share">
-                                                                    <li class="game-info-share-item"><a
-                                                                            class="icon fa fa-twitter"
-                                                                            href="https://www.twitter.com/bimenesfc"
-                                                                            target="_blank"></a></li>
-                                                                    <li class="game-info-share-item"><a
-                                                                            class="icon fa fa-instagram"
-                                                                            href="https://www.instagram.com/bimenesfc"
-                                                                            target="_blank"></a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <a class="button button-sm button-primary" href="https://maps.app.goo.gl/eKvhzbqfXWyTWCP7A" target="_blank">Ver en mapa</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="game-info-team game-info-team-second">
-                                                        <figure><img src="../images/Iconos equipos/Infornet.png" alt=""
-                                                                width="71" height="91" />
-                                                        </figure>
-                                                        <div class="game-result-team-name">Infornet</div>
-                                                        <div class="game-result-team-country">Gijón</div>
-                                                    </div>
-                                                </div>
+                                            <div class="general">
+                                                <h2>Jairo</h2>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
+                                                    volutpat mauris.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </article>
                             </main>
                         </div>
-                        <div class="main-component">
-                            <!-- Heading Component-->
-                            <article class="heading-component">
-                                <div class="heading-component-inner">
-                                    <h6 class="heading-component-title">Copa</h6>
-                                </div>
-                            </article>
-                            Aún no hay datos disponibles
-                            <!-- <main class="main-content"
-                                style="background-color: white; padding: 1rem; border: 1px rgb(226, 226, 226) solid;">
-                                <article class="news-article">
-                                    <div class="news-content">
-                                        
-                                    </div>
-                                </article>
-                            </main> -->
-                        </div>
+
                     </div>
                 </div>
             </div>
