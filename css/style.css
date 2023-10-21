@@ -17180,7 +17180,7 @@ html.rd-navbar-fixed-linked .page {
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-list,
 .rd-navbar-classic.rd-navbar-static .rd-navbar-search {
-	width: calc(50% - 200px / 2);
+	/* width: calc(50% - 200px / 2); */
 }
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-main-bottom {

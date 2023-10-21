@@ -257,15 +257,17 @@
         }
 
         .card {
-            flex: 0 1 calc(100% - 20px); /* Inicia con 2 tarjetas por fila */
+            flex: 0 1 calc(100% - 20px);
+            /* Inicia con 2 tarjetas por fila */
             margin: 10px;
             border: 1px solid #ccc;
             box-sizing: border-box;
         }
-        
+
         @media (max-width: 600px) {
             .card {
-            flex: 0 1 calc(100% - 20px); /* Cambia a 1 tarjeta por fila en pantallas más pequeñas */
+                flex: 0 1 calc(100% - 20px);
+                /* Cambia a 1 tarjeta por fila en pantallas más pequeñas */
             }
         }
 
@@ -340,12 +342,17 @@
                         <div class="rd-navbar-main-top">
                             <div class="rd-navbar-main-container container">
                                 <!-- RD Navbar Brand-->
-                                <div class="rd-navbar-brand"><a href="./"><img class="brand-logo "
+                                <div class="rd-navbar-brand"><a href="./"><img class="brand-logo"
                                             src="..\images\Iconos equipos\bimenes-escudo.png" alt="" width="95"
                                             height="126" /></a>
                                 </div>
                                 <!-- RD Navbar List-->
                                 <ul class="rd-navbar-list">
+                                    <li class="rd-navbar-list-item" style="display: none;">
+                                        <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                            <img src="../images/logo_enate.png" alt="" width="90" height="45" />
+                                        </a>
+                                    </li>
                                     <li class="rd-navbar-list-item">
                                         <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
                                             <img src="../images/logo_enate.png" alt="" width="90" height="45" />
@@ -356,29 +363,41 @@
                                             <img src="../images/logo_kodas.png" alt="" width="90" height="45" />
                                         </a>
                                     </li>
-                                    <li class="rd-navbar-list-item">
-                                        <a class="rd-navbar-list-link" href="https://www.mediazeta.com" target="_blank">
-                                            <img src="../images/logo_mediazeta.png" alt="" width="125" height="80" />
-                                        </a>
-                                    </li>
                                 </ul>
                                 <!-- RD Navbar Search-->
                                 <div class="rd-navbar-search">
-                                    <button class="rd-navbar-search-toggle"
-                                        data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                                    <form class="rd-search" action="#" data-search-live="rd-search-results-live"
-                                        method="GET">
-                                        <div class="form-wrap">
-                                            <label class="form-label"
-                                                for="rd-navbar-search-form-input">Buscar...</label>
-                                            <input class="rd-navbar-search-form-input form-input"
-                                                id="rd-navbar-search-form-input" type="text" name="s"
-                                                autocomplete="off">
-                                            <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                                        </div>
-                                        <button class="rd-search-form-submit fl-budicons-launch-search81"
-                                            type="submit"></button>
-                                    </form>
+                                    <ul class="rd-navbar-list">
+                                        <li class="rd-navbar-list-item">
+                                            <a class="rd-navbar-list-link" href="https://www.mediazeta.com"
+                                                target="_blank">
+                                                <img src="../images/logo_mediazeta.png" alt="" width="125"
+                                                    height="80" />
+                                            </a>
+                                        </li>
+                                        <li class="rd-navbar-list-item">
+                                            <a class="rd-navbar-list-link"
+                                                href="https://uk.linkedin.com/in/carlos-alonso-nebril-57b239211"
+                                                target="_blank">
+                                                <img src="../images/logo_nebril.png" alt="" width="125" height="80" />
+                                            </a>
+                                        </li>
+                                        <li class="rd-navbar-list-item" style="display: none;">
+                                            <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                                <img src="../images/logo_enate.png" alt="" width="90" height="45" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- <button class="rd-navbar-search-toggle"
+                    data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                  <form class="rd-search" action="#" data-search-live="rd-search-results-live" method="GET">
+                    <div class="form-wrap">
+                      <label class="form-label" for="rd-navbar-search-form-input">Buscar...</label>
+                      <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text"
+                        name="s" autocomplete="off">
+                      <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                    </div>
+                    <button class="rd-search-form-submit fl-budicons-launch-search81" type="submit"></button>
+                  </form> -->
                                 </div>
                             </div>
                         </div>
@@ -436,8 +455,8 @@
                                                 <h3 class="game-info-title">Liga Oro - Jornada 1</h3>
                                                 <div class="game-info-main">
                                                     <div class="game-info-team game-info-team-first">
-                                                        <figure><img src="../images/Iconos equipos/LuchyBarber.png" alt=""
-                                                            width="61" height="91" />
+                                                        <figure><img src="../images/Iconos equipos/LuchyBarber.png"
+                                                                alt="" width="61" height="91" />
                                                         </figure>
                                                         <div class="game-result-team-name">LuchyBarber</div>
                                                         <div class="game-result-team-country">Gijón</div>
@@ -462,12 +481,14 @@
                                                                             target="_blank"></a></li>
                                                                 </ul>
                                                             </div>
-                                                            <a class="button button-sm button-primary" href="https://maps.app.goo.gl/LaiW3HFJBeBe7PpF8" target="_blank">Ver en mapa</a>
+                                                            <a class="button button-sm button-primary"
+                                                                href="https://maps.app.goo.gl/LaiW3HFJBeBe7PpF8"
+                                                                target="_blank">Ver en mapa</a>
                                                         </div>
                                                     </div>
                                                     <div class="game-info-team game-info-team-second">
                                                         <figure><img src="../images\Iconos equipos\bimenes-escudo.png"
-                                                            alt="" width="75" height="99" />
+                                                                alt="" width="75" height="99" />
                                                         </figure>
                                                         <div class="game-result-team-name">Bimenes FC</div>
                                                         <div class="game-result-team-country">Bimenes</div>
@@ -507,7 +528,9 @@
                                                                             target="_blank"></a></li>
                                                                 </ul>
                                                             </div>
-                                                            <a class="button button-sm button-primary" href="https://maps.app.goo.gl/eKvhzbqfXWyTWCP7A" target="_blank">Ver en mapa</a>
+                                                            <a class="button button-sm button-primary"
+                                                                href="https://maps.app.goo.gl/eKvhzbqfXWyTWCP7A"
+                                                                target="_blank">Ver en mapa</a>
                                                         </div>
                                                     </div>
                                                     <div class="game-info-team game-info-team-second">

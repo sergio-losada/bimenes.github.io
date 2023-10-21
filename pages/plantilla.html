@@ -97,7 +97,7 @@
             color: #fff;
         }
 
-        .card__header--porteros{
+        .card__header--staff {
             background-color: #F72648;
             background-image: linear-gradient(#F72648, #FCCB3C);
 
@@ -105,7 +105,15 @@
             background: linear-gradient(#F72648, #FCCB3C);
         }
 
-        .card__header--defensas{
+        .card__header--porteros {
+            background-color: #F72648;
+            background-image: linear-gradient(#F72648, #FCCB3C);
+
+            background: #F72648;
+            background: linear-gradient(#F72648, #FCCB3C);
+        }
+
+        .card__header--defensas {
             background-color: #26f78b;
             background-image: linear-gradient(#26f78b, #3c89fc);
 
@@ -380,12 +388,17 @@
                         <div class="rd-navbar-main-top">
                             <div class="rd-navbar-main-container container">
                                 <!-- RD Navbar Brand-->
-                                <div class="rd-navbar-brand"><a href="./"><img class="brand-logo "
+                                <div class="rd-navbar-brand"><a href="./"><img class="brand-logo"
                                             src="..\images\Iconos equipos\bimenes-escudo.png" alt="" width="95"
                                             height="126" /></a>
                                 </div>
                                 <!-- RD Navbar List-->
                                 <ul class="rd-navbar-list">
+                                    <li class="rd-navbar-list-item" style="display: none;">
+                                        <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                            <img src="../images/logo_enate.png" alt="" width="90" height="45" />
+                                        </a>
+                                    </li>
                                     <li class="rd-navbar-list-item">
                                         <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
                                             <img src="../images/logo_enate.png" alt="" width="90" height="45" />
@@ -396,29 +409,41 @@
                                             <img src="../images/logo_kodas.png" alt="" width="90" height="45" />
                                         </a>
                                     </li>
-                                    <li class="rd-navbar-list-item">
-                                        <a class="rd-navbar-list-link" href="https://www.mediazeta.com" target="_blank">
-                                            <img src="../images/logo_mediazeta.png" alt="" width="125" height="80" />
-                                        </a>
-                                    </li>
                                 </ul>
                                 <!-- RD Navbar Search-->
                                 <div class="rd-navbar-search">
-                                    <button class="rd-navbar-search-toggle"
-                                        data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                                    <form class="rd-search" action="#" data-search-live="rd-search-results-live"
-                                        method="GET">
-                                        <div class="form-wrap">
-                                            <label class="form-label"
-                                                for="rd-navbar-search-form-input">Buscar...</label>
-                                            <input class="rd-navbar-search-form-input form-input"
-                                                id="rd-navbar-search-form-input" type="text" name="s"
-                                                autocomplete="off">
-                                            <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                                        </div>
-                                        <button class="rd-search-form-submit fl-budicons-launch-search81"
-                                            type="submit"></button>
-                                    </form>
+                                    <ul class="rd-navbar-list">
+                                        <li class="rd-navbar-list-item">
+                                            <a class="rd-navbar-list-link" href="https://www.mediazeta.com"
+                                                target="_blank">
+                                                <img src="../images/logo_mediazeta.png" alt="" width="125"
+                                                    height="80" />
+                                            </a>
+                                        </li>
+                                        <li class="rd-navbar-list-item">
+                                            <a class="rd-navbar-list-link"
+                                                href="https://uk.linkedin.com/in/carlos-alonso-nebril-57b239211"
+                                                target="_blank">
+                                                <img src="../images/logo_nebril.png" alt="" width="125" height="80" />
+                                            </a>
+                                        </li>
+                                        <li class="rd-navbar-list-item" style="display: none;">
+                                            <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                                <img src="../images/logo_enate.png" alt="" width="90" height="45" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!-- <button class="rd-navbar-search-toggle"
+                    data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                  <form class="rd-search" action="#" data-search-live="rd-search-results-live" method="GET">
+                    <div class="form-wrap">
+                      <label class="form-label" for="rd-navbar-search-form-input">Buscar...</label>
+                      <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text"
+                        name="s" autocomplete="off">
+                      <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                    </div>
+                    <button class="rd-search-form-submit fl-budicons-launch-search81" type="submit"></button>
+                  </form> -->
                                 </div>
                             </div>
                         </div>
@@ -428,9 +453,11 @@
                                 <ul class="rd-navbar-nav">
                                     <li class="rd-nav-item"><a class="rd-nav-link" href="../index.html">Inicio</a>
                                     </li>
-                                    <li class="rd-nav-item"><a class="rd-nav-link" href="../pages/calendario.html">Calendario</a>
+                                    <li class="rd-nav-item"><a class="rd-nav-link"
+                                            href="../pages/calendario.html">Calendario</a>
                                     </li>
-                                    <li class="rd-nav-item active"><a class="rd-nav-link" href="../pages/plantilla.html">Plantilla</a>
+                                    <li class="rd-nav-item active"><a class="rd-nav-link"
+                                            href="../pages/plantilla.html">Plantilla</a>
                                     </li>
                                     <li class="rd-nav-item" style="transition: .45s all ease-in-out;"><a
                                             class="rd-nav-link" href="#contact-us">Contáctanos</a>
@@ -462,6 +489,65 @@
                             <!-- Heading Component-->
                             <article class="heading-component">
                                 <div class="heading-component-inner">
+                                    <h6 class="heading-component-title">Cuerpo técnico</h6>
+                                </div>
+                            </article>
+                            <main class="main-content"
+                                style="background-color: white; padding: 1rem; border: 1px rgb(226, 226, 226) solid;">
+                                <article class="news-article">
+                                    <div class="news-content">
+                                        <div class="card">
+                                            <a>
+                                                <div class="card__header card__header--staff">
+                                                    <div class="card__watermark" data-watermark="19"></div>
+                                                    <h1 class="card__title card__will-animate">Miguel Ceñal</h1>
+                                                    <span class="card__subtitle card__will-animate"></span>
+                                                </div>
+                                                <div class="card__body">
+                                                    <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
+                                                        class="card__image card__will-animate">
+                                                    <div>
+                                                        Miguel Ceñal
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card__header card__header--staff">
+                                                <div class="card__watermark" data-watermark="1"></div>
+                                                <h1 class="card__title card__will-animate">Sergio Losada</h1>
+                                                <span class="card__subtitle card__will-animate"></span>
+                                            </div>
+                                            <div class="card__body">
+                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
+                                                    class="card__image card__will-animate">
+                                                <div>
+                                                    Sergio Losada
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card__header card__header--staff">
+                                                <div class="card__watermark" data-watermark="1"></div>
+                                                <h1 class="card__title card__will-animate">Carlos Nebril</h1>
+                                                <span class="card__subtitle card__will-animate"></span>
+                                            </div>
+                                            <div class="card__body">
+                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
+                                                    class="card__image card__will-animate">
+                                                <div>
+                                                    Carlos Nebril
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </main>
+                        </div>
+                        <div class="main-component">
+                            <!-- Heading Component-->
+                            <article class="heading-component">
+                                <div class="heading-component-inner">
                                     <h6 class="heading-component-title">Porteros</h6>
                                 </div>
                             </article>
@@ -470,7 +556,7 @@
                                 <article class="news-article">
                                     <div class="news-content">
                                         <div class="card">
-                                            <a href="../players/jairo.html">
+                                            <a>
                                                 <div class="card__header card__header--porteros">
                                                     <div class="card__watermark" data-watermark="19"></div>
                                                     <h1 class="card__title card__will-animate">Jairo Pintado</h1>
@@ -805,73 +891,81 @@
                             <h5>Últimas noticias</h5>
                             <div class="divider-small divider-secondary"></div>
                             <div class="row row-20">
-                              <div class="col-sm-6">
-                                <!-- Post Classic-->
-                                <article class="post-classic">
-                                  <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
-                                        src="../images/cartel-torneo.PNG" alt="" width="93" height="87" /></a></div>
-                                  <div class="post-classic-main">
-                                    <!-- Badge-->
-                                    <div class="badge badge-secondary">The Team
-                                    </div>
-                                    <p class="post-classic-title"><a href="../pages/torneo.html">PRESENTACIÓN DEL I TORNEO BIMENES CUP</a></p>
-                                    <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                      <time datetime="2020">Agosto 27, 2023</time>
-                                    </div>
-                                  </div>
-                                </article>
-                              </div>
-                              <div class="col-sm-6">
-                                <!-- Post Classic-->
-                                <article class="post-classic">
-                                  <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
-                                        src="../images\Equipaciones\kits.PNG" alt="" width="93" height="87" /></a></div>
-                                  <div class="post-classic-main">
-                                    <!-- Badge-->
-                                    <div class="badge badge-red">Hot<span class="icon material-icons-whatshot"></span>
-                                    </div>
-                                    <p class="post-classic-title"><a href="../pages/kits.html">LAS NUEVAS EQUIPACIONES para la temporada 23/24</a></p>
-                                    <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                      <time datetime="2020">12-08-2023</time>
-                                    </div>
-                                  </div>
-                                </article>
-                              </div>
-                              <div class="col-sm-6">
-                                <!-- Post Classic-->
-                                <article class="post-classic">
-                                  <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
-                                        src="../images\FotosEquipo\g6.png" alt="" width="93" height="87" /></a></div>
-                                  <div class="post-classic-main">
-                                    <!-- Badge-->
-                                    <div class="badge badge-primary">The League
-                                    </div>
-                                    <p class="post-classic-title"><a href="/pages/finalcopa.html">Bimenes FC, campeón de la F7 Championship</a></p>
-                                    <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                      <time datetime="2020">12-08-2023</time>
-                                    </div>
-                                  </div>
-                                </article>
-                              </div>
-                              <div class="col-sm-6">
-                                <!-- Post Classic-->
-                                <article class="post-classic">
-                                  <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
-                                        src="../images\Iconos equipos\LigaIbericaIcono.jpg" alt="" width="93" height="87" /></a></div>
-                                  <div class="post-classic-main">
-                                    <!-- Badge-->
-                                    <div class="badge badge-primary">The League
-                                    </div>
-                                    <p class="post-classic-title"><a href="#">
-                                      INICIO DE LA LIGA EN OCTUBRE</a></p>
-                                    <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                      <time datetime="2020">12-08-2023</time>
-                                    </div>
-                                  </div>
-                                </article>
-                              </div>
+                                <div class="col-sm-6">
+                                    <!-- Post Classic-->
+                                    <article class="post-classic">
+                                        <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
+                                                    src="../images/cartel-torneo.PNG" alt="" width="93"
+                                                    height="87" /></a></div>
+                                        <div class="post-classic-main">
+                                            <!-- Badge-->
+                                            <div class="badge badge-secondary">The Team
+                                            </div>
+                                            <p class="post-classic-title"><a href="../pages/torneo.html">PRESENTACIÓN
+                                                    DEL I TORNEO BIMENES CUP</a></p>
+                                            <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                                <time datetime="2020">Agosto 27, 2023</time>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Post Classic-->
+                                    <article class="post-classic">
+                                        <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
+                                                    src="../images\Equipaciones\kits.PNG" alt="" width="93"
+                                                    height="87" /></a></div>
+                                        <div class="post-classic-main">
+                                            <!-- Badge-->
+                                            <div class="badge badge-red">Hot<span
+                                                    class="icon material-icons-whatshot"></span>
+                                            </div>
+                                            <p class="post-classic-title"><a href="../pages/kits.html">LAS NUEVAS
+                                                    EQUIPACIONES para la temporada 23/24</a></p>
+                                            <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                                <time datetime="2020">12-08-2023</time>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Post Classic-->
+                                    <article class="post-classic">
+                                        <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
+                                                    src="../images\FotosEquipo\g6.png" alt="" width="93"
+                                                    height="87" /></a></div>
+                                        <div class="post-classic-main">
+                                            <!-- Badge-->
+                                            <div class="badge badge-primary">The League
+                                            </div>
+                                            <p class="post-classic-title"><a href="/pages/finalcopa.html">Bimenes FC,
+                                                    campeón de la F7 Championship</a></p>
+                                            <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                                <time datetime="2020">12-08-2023</time>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-sm-6">
+                                    <!-- Post Classic-->
+                                    <article class="post-classic">
+                                        <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img
+                                                    src="../images\Iconos equipos\LigaIbericaIcono.jpg" alt=""
+                                                    width="93" height="87" /></a></div>
+                                        <div class="post-classic-main">
+                                            <!-- Badge-->
+                                            <div class="badge badge-primary">The League
+                                            </div>
+                                            <p class="post-classic-title"><a href="#">
+                                                    INICIO DE LA LIGA EN OCTUBRE</a></p>
+                                            <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                                <time datetime="2020">12-08-2023</time>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
