@@ -35,7 +35,10 @@
 
         /* Styling for the card */
         .card {
-            width: 300px;
+            width: 450px;
+            max-height: 340px !important;
+            /* min-height: 380px !important; */
+            min-width: 275px;
             border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -90,7 +93,7 @@
 
         .card__header {
             position: relative;
-            height: 170px;
+            height: 380px;
             padding: 30px 30px 300px;
             border-top-right-radius: 15px;
             border-top-left-radius: 15px;
@@ -184,15 +187,15 @@
 
         .card__body {
             position: relative;
-            padding: 10px 0px 10px 0px;
+            /* padding: 10px 0px 10px 0px; */
         }
 
         .card__image {
             z-index: 1;
             position: absolute;
-            top: -290px;
-            left: -30px;
-            width: 125%;
+            top: -285px;
+            left: 40px;
+            width: 80% !important;
 
             user-select: none;
             -moz-user-select: none;
@@ -211,6 +214,7 @@
             text-align: center;
             text-transform: uppercase;
             font-size: 14px;
+            z-index: 2;
         }
 
         .card__wish-list--19 {
@@ -396,17 +400,17 @@
                                 <ul class="rd-navbar-list">
                   <li class="rd-navbar-list-item" style="display: none;">
                     <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
-                      <img src="images/logo_enate.png" alt="" width="120" height="95" />
+                      <img src="../images/logo_enate.png" alt="" width="120" height="95" />
                     </a>
                   </li>
                   <li class="rd-navbar-list-item">
                     <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
-                      <img src="images/logo_enate.png" alt="" width="135" height="45" />
+                      <img src="../images/logo_enate.png" alt="" width="135" height="45" />
                     </a>
                   </li>
                   <li class="rd-navbar-list-item">
                     <a class="rd-navbar-list-link" href="https://www.kodas.es" target="_blank">
-                      <img src="images/logo_kodas.png" alt="" width="115" height="45" />
+                      <img src="../images/logo_kodas.png" alt="" width="115" height="45" />
                     </a>
                   </li>
                 </ul>
@@ -415,18 +419,18 @@
                   <ul class="rd-navbar-list">
                     <li class="rd-navbar-list-item">
                       <a class="rd-navbar-list-link" href="https://www.mediazeta.com" target="_blank">
-                        <img src="images/logo_mediazeta.png" alt="" width="155" height="80" />
+                        <img src="../images/logo_mediazeta.png" alt="" width="155" height="80" />
                       </a>
                     </li>
                     <li class="rd-navbar-list-item">
                       <a class="rd-navbar-list-link" href="https://uk.linkedin.com/in/carlos-alonso-nebril-57b239211"
                         target="_blank">
-                        <img src="images/logo_nebril.png" alt="" width="155" height="80" />
+                        <img src="../images/logo_nebril.png" alt="" width="155" height="80" />
                       </a>
                     </li>
                     <li class="rd-navbar-list-item" style="display: none;">
                       <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
-                        <img src="images/logo_enate.png" alt="" width="90" height="45" />
+                        <img src="../images/logo_enate.png" alt="" width="90" height="45" />
                       </a>
                     </li>
                   </ul>
@@ -560,11 +564,7 @@
                                                     <span class="card__subtitle card__will-animate"></span>
                                                 </div>
                                                 <div class="card__body">
-                                                    <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                        class="card__image card__will-animate">
-                                                    <div>
-                                                        Jairo Pintado
-                                                    </div>
+                                                    <!-- <img src="../images/jugadores/10COMPE.png" class="card__image card__will-animate"> -->
                                                 </div>
                                             </a>
                                         </div>
@@ -575,11 +575,17 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Óscar Cano
-                                                </div>
+                                                <!-- <img src="../images/jugadores/10COMPE.png" class="card__image card__will-animate"> -->
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card__header card__header--porteros">
+                                                <div class="card__watermark" data-watermark="1"></div>
+                                                <h1 class="card__title card__will-animate">Miguel Laruelo</h1>
+                                                <span class="card__subtitle card__will-animate"></span>
+                                            </div>
+                                            <div class="card__body">
+                                                <img src="../images/jugadores/1MIGUEL.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                     </div>
@@ -604,11 +610,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Gonzalo Elías
-                                                </div>
+                                                <img src="../images/jugadores/23GONZA.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
@@ -618,11 +620,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Kiko Aira
-                                                </div>
+                                                <img src="../images/jugadores/47KIKO.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
@@ -632,11 +630,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Iván Tella
-                                                </div>
+                                                <img src="../images/jugadores/17TELLA.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
@@ -646,11 +640,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Mario Nuño
-                                                </div>
+                                                <!-- <img src="../images/jugadores/1MIGUEL.png" class="card__image card__will-animate"> -->
                                             </div>
                                         </div>
                                         <div class="card">
@@ -660,11 +650,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Pelayo Valenciano
-                                                </div>
+                                                <img src="../images/jugadores/14PELA.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                     </div>
@@ -689,11 +675,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Luis Meana
-                                                </div>
+                                                <img src="../images/jugadores/5LUIS.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
@@ -703,11 +685,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Aitor Mpele
-                                                </div>
+                                                <img src="../images/jugadores/69VENOM.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
@@ -717,11 +695,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Isma Terrones
-                                                </div>
+                                                <img src="../images/jugadores/8ISMA.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                     </div>
@@ -746,25 +720,17 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Adrián Capelo
-                                                </div>
+                                                <img src="../images/jugadores/10COMPE.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
                                             <div class="card__header card__header--delanteros">
-                                                <div class="card__watermark" data-watermark="11"></div>
+                                                <div class="card__watermark" data-watermark="7"></div>
                                                 <h1 class="card__title card__will-animate">Andros Llamedo</h1>
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Andros Llamedo
-                                                </div>
+                                                <img src="../images/jugadores/7ANDROS.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                         <div class="card">
@@ -774,11 +740,7 @@
                                                 <span class="card__subtitle card__will-animate"></span>
                                             </div>
                                             <div class="card__body">
-                                                <img src="https://i.ibb.co/R0Y8T8r/nike19.png"
-                                                    class="card__image card__will-animate">
-                                                <div>
-                                                    Adri Valenciano
-                                                </div>
+                                                <img src="../images/jugadores/9VALEN.png" class="card__image card__will-animate">
                                             </div>
                                         </div>
                                     </div>
