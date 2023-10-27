@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/stats.css">
+    <!-- <link rel="stylesheet" href="../css/cards.css"> -->
     <style>
         .ie-panel {
             display: none;
@@ -32,6 +33,245 @@
         html.lt-ie-10 .ie-panel {
             display: block;
         }
+
+
+    /* Styling for the card */
+    .card {
+            width: 450px;
+            max-height: 340px !important;
+            /* min-height: 380px !important; */
+            min-width: 275px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Styling for the player image */
+        .player-image {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Styling for player information */
+        .player-info {
+            margin-top: 10px;
+        }
+
+        /* Styling for player name */
+        .player-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Styling for player position */
+        .player-position {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Styling for player statistics */
+        .player-stats {
+            margin-top: 10px;
+        }
+
+        /* Styling for statistic labels */
+        .stat-label {
+            font-weight: bold;
+        }
+
+        /* Styling for statistic values */
+        .stat-value {
+            color: #555;
+        }
+
+        .card__header {
+            position: relative;
+            height: 380px;
+            padding: 30px 30px 300px;
+            border-radius: 15px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .card__header--staff {
+            background-color: #F72648;
+            background-image: linear-gradient(#F72648, #FCCB3C);
+
+            background: #F72648;
+            background: linear-gradient(#F72648, #FCCB3C);
+        }
+
+        .card__header--porteros {
+            background-color: #F72648;
+            background-image: linear-gradient(#F72648, #FCCB3C);
+
+            background: #F72648;
+            background: linear-gradient(#F72648, #FCCB3C);
+        }
+
+        .card__header--defensas {
+            background-color: #26f78b;
+            background-image: linear-gradient(#26f78b, #3c89fc);
+
+            background: #26f78b;
+            background: linear-gradient(#08ec76, #3c89fc);
+        }
+
+        .card__header--centrocampistas {
+            background-color: #26C9F7;
+            background-image: linear-gradient(#fb0383, #393939);
+
+            background: #26C9F7;
+            background: linear-gradient(#fb0383, #03a2fb);
+        }
+
+        .card__header--delanteros {
+            background-color: #3CA3FC;
+            background-image: linear-gradient(#b04afe, #4afed1);
+
+            background: #3CA3FC;
+            background: linear-gradient(#b04afe, #4afed1);
+        }
+
+        .card__watermark {
+            overflow: hidden;
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            top: 0;
+
+            width: 100%;
+        }
+
+        .card__watermark::after {
+            content: attr(data-watermark);
+            position: relative;
+            /* left: -20px; */
+            color: rgba(0, 0, 0, .3);
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .card__logo {
+            width: 50px;
+            height: auto;
+        }
+
+        .card__price {
+            float: right;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .card__title {
+            margin: 35px 0 20px;
+            font-size: 15px;
+            line-height: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            align-items: center;
+        }
+
+        .card__subtitle {
+            display: block;
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        .card__body {
+            position: relative;
+            /* width: 119%; */
+            /* padding: 10px 0px 10px 0px; */
+        }
+
+        .card__image {
+            z-index: 1;
+            position: absolute;
+            top: -285px;
+            left: 7px;
+            width: 95.2% !important;
+
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .card__wish-list {
+            display: block;
+            width: 50%;
+            margin: 0 auto 15px;
+            padding: 15px;
+            border: 2px solid #fff;
+            border-radius: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .card__wish-list--19 {
+            color: #8850FF;
+            border-color: #8850FF;
+        }
+
+        .card__wish-list--solstice {
+            color: #FFBA00;
+            border-color: #FFBA00;
+        }
+
+        .card__wish-list--huarache {
+            color: #26C9F7;
+            border-color: #26C9F7;
+        }
+
+        .card__category {
+            display: block;
+            font-size: 12px;
+            color: #AEAEAE;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .card__will-animate {
+            will-change: transform;
+        }
+
+        .cards-placeholder {
+            display: block;
+            position: relative;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .cards-placeholder__item {
+            opacity: 0.3;
+            display: inline-block;
+            margin-right: 10px;
+            background-color: #fff;
+            width: 30px;
+            height: 5px;
+            border-radius: 5px;
+
+            transition: opacity 0.2s;
+            will-change: opacity;
+        }
+
+        .cards-placeholder__item--active {
+            opacity: 1;
+        }
+
     </style>
 </head>
 
@@ -106,53 +346,45 @@
                                 </div>
                                 <!-- RD Navbar List-->
                                 <ul class="rd-navbar-list">
-                  <li class="rd-navbar-list-item" style="display: none;">
-                    <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
-                      <img src="../images/logo_enate.png" alt="" width="120" height="95" />
-                    </a>
-                  </li>
-                  <li class="rd-navbar-list-item">
-                    <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
-                      <img src="../images/logo_enate.png" alt="" width="135" height="45" />
-                    </a>
-                  </li>
-                  <li class="rd-navbar-list-item">
-                    <a class="rd-navbar-list-link" href="https://www.kodas.es" target="_blank">
-                      <img src="../images/logo_kodas.png" alt="" width="115" height="45" />
-                    </a>
-                  </li>
-                </ul>
-                <!-- RD Navbar Search-->
-                <div class="rd-navbar-search">
-                  <ul class="rd-navbar-list">
-                    <li class="rd-navbar-list-item">
-                      <a class="rd-navbar-list-link" href="https://www.mediazeta.com" target="_blank">
-                        <img src="../images/logo_mediazeta.png" alt="" width="155" height="80" />
-                      </a>
-                    </li>
-                    <li class="rd-navbar-list-item">
-                      <a class="rd-navbar-list-link" href="https://nbrldsgn.myportfolio.com"
-                        target="_blank">
-                        <img src="../images/logo_nebril_blanco.png" alt="" width="155" height="80" />
-                      </a>
-                    </li>
-                    <li class="rd-navbar-list-item" style="display: none;">
-                      <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
-                        <img src="../images/logo_enate.png" alt="" width="90" height="45" />
-                      </a>
-                    </li>
-                  </ul>
-                                    <!-- <button class="rd-navbar-search-toggle"
-                    data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                  <form class="rd-search" action="#" data-search-live="rd-search-results-live" method="GET">
-                    <div class="form-wrap">
-                      <label class="form-label" for="rd-navbar-search-form-input">Buscar...</label>
-                      <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text"
-                        name="s" autocomplete="off">
-                      <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                    </div>
-                    <button class="rd-search-form-submit fl-budicons-launch-search81" type="submit"></button>
-                  </form> -->
+                                    <li class="rd-navbar-list-item" style="display: none;">
+                                        <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                            <img src="../images/logo_enate.png" alt="" width="120" height="95" />
+                                        </a>
+                                    </li>
+                                    <li class="rd-navbar-list-item">
+                                        <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                            <img src="../images/logo_enate.png" alt="" width="135" height="45" />
+                                        </a>
+                                    </li>
+                                    <li class="rd-navbar-list-item">
+                                        <a class="rd-navbar-list-link" href="https://www.kodas.es" target="_blank">
+                                            <img src="../images/logo_kodas.png" alt="" width="115" height="45" />
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- RD Navbar Search-->
+                                <div class="rd-navbar-search">
+                                    <ul class="rd-navbar-list">
+                                        <li class="rd-navbar-list-item">
+                                            <a class="rd-navbar-list-link" href="https://www.mediazeta.com"
+                                                target="_blank">
+                                                <img src="../images/logo_mediazeta.png" alt="" width="155"
+                                                    height="80" />
+                                            </a>
+                                        </li>
+                                        <li class="rd-navbar-list-item">
+                                            <a class="rd-navbar-list-link" href="https://nbrldsgn.myportfolio.com"
+                                                target="_blank">
+                                                <img src="../images/logo_nebril_blanco.png" alt="" width="155"
+                                                    height="80" />
+                                            </a>
+                                        </li>
+                                        <li class="rd-navbar-list-item" style="display: none;">
+                                            <a class="rd-navbar-list-link" href="https://www.enate.es" target="_blank">
+                                                <img src="../images/logo_enate.png" alt="" width="90" height="45" />
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -193,18 +425,169 @@
             <div class="container">
                 <div class="row row-50">
                     <div class="col-lg-12">
-                        <h2>Plantilla Bimenes FC - Jairo Pintado</h2>
                         <div class="main-component">
                             <!-- Heading Component-->
                             <article class="heading-component">
                                 <div class="heading-component-inner">
-                                    <h6 class="heading-component-title">Portero</h6>
+                                    <h6 class="heading-component-title">Porteros - Jairo Pintado</h6>
                                 </div>
                             </article>
                             <main class="main-content"
-                                style="background-color: white; padding: 1rem; border: 1px rgb(226, 226, 226) solid;">
+                                style="background-color: white;border: 1px rgb(226, 226, 226) solid; min-width: 100% !important;">
                                 <article class="news-article">
-                                    <div class="news-content">
+
+                                    <div class="container bootstrap snippets bootdey">
+                                        <div class="row">
+                                            <div class="profile-nav col-md-4">
+                                                <div class="card__header card__header--porteros">
+                                                    <div class="card__watermark" data-watermark="19"></div>
+                                                    <h1 class="card__title card__will-animate">Jairo Pintado</h1>
+                                                    <span class="card__subtitle card__will-animate"></span>
+                                                </div>
+                                                <div class="card__body">
+                                                    <img src="../images/jugadores/19JAIRO.png" class="card__image card__will-animate">
+                                                </div>
+                                            </div>
+                                            <div class="profile-info col-md-8">
+                                                <div class="panel">
+                                                    <div class="panel-body bio-graph-info">
+                                                        <h1>Bio Graph</h1>
+                                                        <div class="row">
+                                                            <div class="bio-row">
+                                                                <p><span>First Name </span>: Camila</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Last Name </span>: Smith</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Country </span>: Australia</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Birthday</span>: 13 July 1983</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Occupation </span>: UI Designer</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Email </span>: jsmith@flatlab.com</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Mobile </span>: (12) 03 4567890</p>
+                                                            </div>
+                                                            <div class="bio-row">
+                                                                <p><span>Phone </span>: 88 (02) 123456</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="panel">
+                                                                <div class="panel-body">
+                                                                    <div class="bio-chart">
+                                                                        <div
+                                                                            style="display:inline;width:100px;height:100px;">
+                                                                            <canvas width="100"
+                                                                                height="100px"></canvas><input
+                                                                                class="knob" data-width="100"
+                                                                                data-height="100"
+                                                                                data-displayprevious="true"
+                                                                                data-thickness=".2" value="35"
+                                                                                data-fgcolor="#e06b7d"
+                                                                                data-bgcolor="#e8e8e8"
+                                                                                style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(224, 107, 125); padding: 0px; -webkit-appearance: none; background: none;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bio-desk">
+                                                                        <h4 class="red">Envato Website</h4>
+                                                                        <p>Started : 15 July</p>
+                                                                        <p>Deadline : 15 August</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="panel">
+                                                                <div class="panel-body">
+                                                                    <div class="bio-chart">
+                                                                        <div
+                                                                            style="display:inline;width:100px;height:100px;">
+                                                                            <canvas width="100"
+                                                                                height="100px"></canvas><input
+                                                                                class="knob" data-width="100"
+                                                                                data-height="100"
+                                                                                data-displayprevious="true"
+                                                                                data-thickness=".2" value="63"
+                                                                                data-fgcolor="#4CC5CD"
+                                                                                data-bgcolor="#e8e8e8"
+                                                                                style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(76, 197, 205); padding: 0px; -webkit-appearance: none; background: none;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bio-desk">
+                                                                        <h4 class="terques">ThemeForest CMS </h4>
+                                                                        <p>Started : 15 July</p>
+                                                                        <p>Deadline : 15 August</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="panel">
+                                                                <div class="panel-body">
+                                                                    <div class="bio-chart">
+                                                                        <div
+                                                                            style="display:inline;width:100px;height:100px;">
+                                                                            <canvas width="100"
+                                                                                height="100px"></canvas><input
+                                                                                class="knob" data-width="100"
+                                                                                data-height="100"
+                                                                                data-displayprevious="true"
+                                                                                data-thickness=".2" value="75"
+                                                                                data-fgcolor="#96be4b"
+                                                                                data-bgcolor="#e8e8e8"
+                                                                                style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(150, 190, 75); padding: 0px; -webkit-appearance: none; background: none;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bio-desk">
+                                                                        <h4 class="green">VectorLab Portfolio</h4>
+                                                                        <p>Started : 15 July</p>
+                                                                        <p>Deadline : 15 August</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="panel">
+                                                                <div class="panel-body">
+                                                                    <div class="bio-chart">
+                                                                        <div
+                                                                            style="display:inline;width:100px;height:100px;">
+                                                                            <canvas width="100"
+                                                                                height="100px"></canvas><input
+                                                                                class="knob" data-width="100"
+                                                                                data-height="100"
+                                                                                data-displayprevious="true"
+                                                                                data-thickness=".2" value="50"
+                                                                                data-fgcolor="#cba4db"
+                                                                                data-bgcolor="#e8e8e8"
+                                                                                style="width: 54px; height: 33px; position: absolute; vertical-align: middle; margin-top: 33px; margin-left: -77px; border: 0px; font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; text-align: center; color: rgb(203, 164, 219); padding: 0px; -webkit-appearance: none; background: none;">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="bio-desk">
+                                                                        <h4 class="purple">Adobe Muse Template</h4>
+                                                                        <p>Started : 15 July</p>
+                                                                        <p>Deadline : 15 August</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="news-content">
                                         <div class="card">
                                             <div class="additional">
                                                 <div class="user-card">
@@ -214,7 +597,7 @@
                                                     <div class="points center">
                                                         5,312 Points
                                                     </div>
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                                    <img src="../images/jugadores/19JAIRO.png"
                                                         class="img-fluid d-block mx-auto rounded-circle img-thumbnail mb-4">
                                                 </div>
                                                 <div class="more-info">
@@ -252,13 +635,19 @@
                                                 </div>
                                             </div>
                                             <div class="general">
-                                                <h2>Jairo</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-                                                    volutpat mauris.
-                                                </p>
+                                                <div class="card__header card__header--porteros">
+                                                    <div class="card__watermark" data-watermark="19"></div>
+                                                    <h1 class="card__title card__will-animate">Jairo</h1>
+                                                    <span class="card__subtitle card__will-animate"></span>
+                                                    </div>
+                                                        <div class="card__body">
+                                                            <img src="../images/jugadores/19JAIRO.png" class="card__image card__will-animate">
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </article>
                             </main>
                         </div>
